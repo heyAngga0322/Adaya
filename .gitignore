@@ -1,0 +1,28 @@
+## Build artifacts
+bin/
+obj/
+out/
+
+## IDE
+.vs/
+.idea/
+*.user
+*.suo
+
+## OS
+.DS_Store
+Thumbs.db
+
+## Logs
+*.log
+
+## Environment
+.env
+.env.*
+
+## Test results
+TestResults/
+coverage/
+
+## Docker
+postgres_data/
