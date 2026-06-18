@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="ff79b6ce-002f-41a0-83f7-f4178c8f0c66" name="@cachyos-x8664 2026-06-19 06:05:14" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2026-06-19T06:05:14.1989959+07:00" queuing="2026-06-19T06:05:14.1989983+07:00" start="2026-06-19T06:05:11.6945472+07:00" finish="2026-06-19T06:05:21.8009516+07:00" />
+  <TestSettings name="default" id="97832768-2209-4d70-8ce1-ce07c392333c">
+    <Deployment runDeploymentRoot="_cachyos-x8664_2026-06-19_06_05_14" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="cc11a99e-f886-4bb3-a9b7-c795b74443c3" testId="8934e192-f81e-14ad-60a0-03d6a15d56ba" testName="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithInsufficientStock_ThrowsUnprocessableException" computerName="cachyos-x8664" duration="00:00:00.8555666" startTime="2026-06-19T06:05:13.8800699+07:00" endTime="2026-06-19T06:05:19.2605643+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cc11a99e-f886-4bb3-a9b7-c795b74443c3" />
+    <UnitTestResult executionId="526d7d91-a8ee-4995-bca5-6b7f6009051d" testId="5763b8f9-8c0b-05f2-b497-d6a3b95948f4" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Confirmed, next: Shipped, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0357602" startTime="2026-06-19T06:05:13.8670238+07:00" endTime="2026-06-19T06:05:13.9261845+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="526d7d91-a8ee-4995-bca5-6b7f6009051d" />
+    <UnitTestResult executionId="8eb00c77-0ed1-4977-94de-a39534869f7c" testId="6c319d2f-4ee3-f2e7-59f5-50060bd40928" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Cancelled, next: Pending, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0000212" startTime="2026-06-19T06:05:13.9719799+07:00" endTime="2026-06-19T06:05:13.9721591+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8eb00c77-0ed1-4977-94de-a39534869f7c" />
+    <UnitTestResult executionId="7b1d3900-aef4-4b53-a0c4-f184842e95a9" testId="5d83a3c0-24b5-7ab9-2f0c-e8f3e8934366" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Shipped, next: Delivered, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0000133" startTime="2026-06-19T06:05:13.9710379+07:00" endTime="2026-06-19T06:05:13.9711839+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7b1d3900-aef4-4b53-a0c4-f184842e95a9" />
+    <UnitTestResult executionId="34510850-bba1-4c21-9db7-4415ed826e9a" testId="315279ef-8f43-ef09-48f5-2a5ef162b946" testName="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentStatusUpdate_OnlyOneUpdateWins" computerName="cachyos-x8664" duration="00:00:00.1312000" startTime="2026-06-19T06:05:21.3525031+07:00" endTime="2026-06-19T06:05:21.5345422+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="34510850-bba1-4c21-9db7-4415ed826e9a" />
+    <UnitTestResult executionId="2b817774-3a9d-4716-bc62-f72f1e8bcba5" testId="80e699e9-9563-b8d4-1a60-465cf669a5a3" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Shipped, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0000333" startTime="2026-06-19T06:05:14.0846920+07:00" endTime="2026-06-19T06:05:14.0848245+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2b817774-3a9d-4716-bc62-f72f1e8bcba5" />
+    <UnitTestResult executionId="86678003-d4ad-4f03-853e-ee8e3a563a3e" testId="b5231f90-a6e3-bca7-08d3-993d6497fcad" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Delivered, next: Cancelled, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0000131" startTime="2026-06-19T06:05:13.9715144+07:00" endTime="2026-06-19T06:05:13.9716837+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="86678003-d4ad-4f03-853e-ee8e3a563a3e" />
+    <UnitTestResult executionId="eb80610f-e93f-4e75-bae3-35f08e582e64" testId="4214af45-5078-2eaf-6005-78e7b7017631" testName="OrderManagement.Tests.OrderServiceIntegrationTests.CancelOrder_RestoresStock" computerName="cachyos-x8664" duration="00:00:00.2009683" startTime="2026-06-19T06:05:20.1157086+07:00" endTime="2026-06-19T06:05:20.5771612+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="eb80610f-e93f-4e75-bae3-35f08e582e64" />
+    <UnitTestResult executionId="ed18ec2e-d8d3-4f07-97f5-a322bb6feb9f" testId="0ef67921-46d0-e1da-a4bd-ca5f96666c44" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Cancelled, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0019139" startTime="2026-06-19T06:05:13.9683837+07:00" endTime="2026-06-19T06:05:13.9685671+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed18ec2e-d8d3-4f07-97f5-a322bb6feb9f" />
+    <UnitTestResult executionId="f022a353-1de0-4f1c-8e08-3331982612c4" testId="b9e76fe0-50b3-1c9f-aea2-9b7bdb9da409" testName="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentStockDeduction_OnlyOneOrderSucceeds" computerName="cachyos-x8664" duration="00:00:00.1231239" startTime="2026-06-19T06:05:21.1798468+07:00" endTime="2026-06-19T06:05:21.3520233+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f022a353-1de0-4f1c-8e08-3331982612c4" />
+    <UnitTestResult executionId="b0d7a751-e98a-456d-8078-d3f01751d495" testId="d9e1b26a-4264-8ec8-8bf8-a69b542c8652" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Pending, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0000195" startTime="2026-06-19T06:05:14.0850473+07:00" endTime="2026-06-19T06:05:14.0851455+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b0d7a751-e98a-456d-8078-d3f01751d495" />
+    <UnitTestResult executionId="c3522fb1-66cb-4cbe-b698-0d76fcb574ea" testId="418a3562-fd33-0ac3-b0df-a7554e9c04cf" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Cancelled, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0006759" startTime="2026-06-19T06:05:14.0830075+07:00" endTime="2026-06-19T06:05:14.0832065+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c3522fb1-66cb-4cbe-b698-0d76fcb574ea" />
+    <UnitTestResult executionId="5eab2315-daf6-4224-86ef-d21b2c545d2b" testId="17d8a200-26e0-c2f0-13ff-b0ee0be5efa0" testName="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithSameIdempotencyKey_ReturnsSameOrder" computerName="cachyos-x8664" duration="00:00:00.6681189" startTime="2026-06-19T06:05:19.2667669+07:00" endTime="2026-06-19T06:05:20.1150638+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5eab2315-daf6-4224-86ef-d21b2c545d2b" />
+    <UnitTestResult executionId="125e406d-81d0-46e8-9755-1cb1b6bc7e25" testId="c58361ee-6cd9-06f6-2aef-c6dff7fa48bb" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Confirmed, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0011474" startTime="2026-06-19T06:05:14.0842028+07:00" endTime="2026-06-19T06:05:14.0843390+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="125e406d-81d0-46e8-9755-1cb1b6bc7e25" />
+    <UnitTestResult executionId="5a9cac06-dc68-4323-b12e-81861604c6be" testId="613ccb19-fde5-996f-d590-11ff289aac4f" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Confirmed, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0000138" startTime="2026-06-19T06:05:13.9724267+07:00" endTime="2026-06-19T06:05:13.9725825+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5a9cac06-dc68-4323-b12e-81861604c6be" />
+    <UnitTestResult executionId="a5c75624-63ac-4f51-810e-8449eed2b708" testId="37c36789-4f82-51dc-a800-0c8f24ca2ddb" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Shipped, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0000665" startTime="2026-06-19T06:05:13.9705053+07:00" endTime="2026-06-19T06:05:13.9706964+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a5c75624-63ac-4f51-810e-8449eed2b708" />
+    <UnitTestResult executionId="d3415232-1cb2-4ccb-a09d-40bbe9a70173" testId="bdbd6c93-a683-6418-1254-cd8f7d9a58a1" testName="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentIdempotentCreate_CreatesSingleOrder" computerName="cachyos-x8664" duration="00:00:00.4224308" startTime="2026-06-19T06:05:20.6941808+07:00" endTime="2026-06-19T06:05:21.1793229+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d3415232-1cb2-4ccb-a09d-40bbe9a70173" />
+    <UnitTestResult executionId="11d981c9-a582-4d99-9f92-9782846bd642" testId="b3b9bbbb-90f2-657d-4379-5cc10d1e49e6" testName="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithValidRequest_CreatesPendingOrder" computerName="cachyos-x8664" duration="00:00:00.0395802" startTime="2026-06-19T06:05:20.5780212+07:00" endTime="2026-06-19T06:05:20.6914045+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="11d981c9-a582-4d99-9f92-9782846bd642" />
+    <UnitTestResult executionId="2e312ddd-52ed-4a19-b2d2-bfde85b9418c" testId="e913c38b-e670-4931-ccbc-def437574ff7" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Confirmed, next: Cancelled, expected: True)" computerName="cachyos-x8664" duration="00:00:00.0000143" startTime="2026-06-19T06:05:13.9729223+07:00" endTime="2026-06-19T06:05:13.9730679+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2e312ddd-52ed-4a19-b2d2-bfde85b9418c" />
+    <UnitTestResult executionId="5784dfdc-158c-4d27-aba2-9632ba391099" testId="c4e1c9ec-1e90-97d5-804c-3885d45f4e00" testName="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Delivered, expected: False)" computerName="cachyos-x8664" duration="00:00:00.0000118" startTime="2026-06-19T06:05:14.0853422+07:00" endTime="2026-06-19T06:05:14.0854686+07:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5784dfdc-158c-4d27-aba2-9632ba391099" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithValidRequest_CreatesPendingOrder" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="b3b9bbbb-90f2-657d-4379-5cc10d1e49e6">
+      <Execution id="11d981c9-a582-4d99-9f92-9782846bd642" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="CreateOrder_WithValidRequest_CreatesPendingOrder" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Cancelled, next: Pending, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="6c319d2f-4ee3-f2e7-59f5-50060bd40928">
+      <Execution id="8eb00c77-0ed1-4977-94de-a39534869f7c" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Delivered, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="c4e1c9ec-1e90-97d5-804c-3885d45f4e00">
+      <Execution id="5784dfdc-158c-4d27-aba2-9632ba391099" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanCancel_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Shipped, next: Delivered, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="5d83a3c0-24b5-7ab9-2f0c-e8f3e8934366">
+      <Execution id="7b1d3900-aef4-4b53-a0c4-f184842e95a9" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.CancelOrder_RestoresStock" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="4214af45-5078-2eaf-6005-78e7b7017631">
+      <Execution id="eb80610f-e93f-4e75-bae3-35f08e582e64" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="CancelOrder_RestoresStock" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Cancelled, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="0ef67921-46d0-e1da-a4bd-ca5f96666c44">
+      <Execution id="ed18ec2e-d8d3-4f07-97f5-a322bb6feb9f" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithInsufficientStock_ThrowsUnprocessableException" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="8934e192-f81e-14ad-60a0-03d6a15d56ba">
+      <Execution id="cc11a99e-f886-4bb3-a9b7-c795b74443c3" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="CreateOrder_WithInsufficientStock_ThrowsUnprocessableException" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentStockDeduction_OnlyOneOrderSucceeds" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="b9e76fe0-50b3-1c9f-aea2-9b7bdb9da409">
+      <Execution id="f022a353-1de0-4f1c-8e08-3331982612c4" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="ConcurrentStockDeduction_OnlyOneOrderSucceeds" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Delivered, next: Cancelled, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="b5231f90-a6e3-bca7-08d3-993d6497fcad">
+      <Execution id="86678003-d4ad-4f03-853e-ee8e3a563a3e" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Confirmed, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="613ccb19-fde5-996f-d590-11ff289aac4f">
+      <Execution id="5a9cac06-dc68-4323-b12e-81861604c6be" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentIdempotentCreate_CreatesSingleOrder" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="bdbd6c93-a683-6418-1254-cd8f7d9a58a1">
+      <Execution id="d3415232-1cb2-4ccb-a09d-40bbe9a70173" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="ConcurrentIdempotentCreate_CreatesSingleOrder" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Confirmed, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="c58361ee-6cd9-06f6-2aef-c6dff7fa48bb">
+      <Execution id="125e406d-81d0-46e8-9755-1cb1b6bc7e25" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanCancel_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Pending, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="d9e1b26a-4264-8ec8-8bf8-a69b542c8652">
+      <Execution id="b0d7a751-e98a-456d-8078-d3f01751d495" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanCancel_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Confirmed, next: Shipped, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="5763b8f9-8c0b-05f2-b497-d6a3b95948f4">
+      <Execution id="526d7d91-a8ee-4995-bca5-6b7f6009051d" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.CreateOrder_WithSameIdempotencyKey_ReturnsSameOrder" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="17d8a200-26e0-c2f0-13ff-b0ee0be5efa0">
+      <Execution id="5eab2315-daf6-4224-86ef-d21b2c545d2b" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="CreateOrder_WithSameIdempotencyKey_ReturnsSameOrder" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderServiceIntegrationTests.ConcurrentStatusUpdate_OnlyOneUpdateWins" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="315279ef-8f43-ef09-48f5-2a5ef162b946">
+      <Execution id="34510850-bba1-4c21-9db7-4415ed826e9a" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderServiceIntegrationTests" name="ConcurrentStatusUpdate_OnlyOneUpdateWins" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Cancelled, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="418a3562-fd33-0ac3-b0df-a7554e9c04cf">
+      <Execution id="c3522fb1-66cb-4cbe-b698-0d76fcb574ea" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanCancel_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Confirmed, next: Cancelled, expected: True)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="e913c38b-e670-4931-ccbc-def437574ff7">
+      <Execution id="2e312ddd-52ed-4a19-b2d2-bfde85b9418c" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanTransition_ReturnsExpectedResult(current: Pending, next: Shipped, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="37c36789-4f82-51dc-a800-0c8f24ca2ddb">
+      <Execution id="a5c75624-63ac-4f51-810e-8449eed2b708" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanTransition_ReturnsExpectedResult" />
+    </UnitTest>
+    <UnitTest name="OrderManagement.Tests.OrderStatusTransitionTests.CanCancel_ReturnsExpectedResult(status: Shipped, expected: False)" storage="/home/angga/projects/adaya/tests/ordermanagement.tests/bin/debug/net10.0/ordermanagement.tests.dll" id="80e699e9-9563-b8d4-1a60-465cf669a5a3">
+      <Execution id="2b817774-3a9d-4716-bc62-f72f1e8bcba5" />
+      <TestMethod codeBase="/home/angga/Projects/Adaya/tests/OrderManagement.Tests/bin/Debug/net10.0/OrderManagement.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner3/netcore/" className="OrderManagement.Tests.OrderStatusTransitionTests" name="CanCancel_ReturnsExpectedResult" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="8934e192-f81e-14ad-60a0-03d6a15d56ba" executionId="cc11a99e-f886-4bb3-a9b7-c795b74443c3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5763b8f9-8c0b-05f2-b497-d6a3b95948f4" executionId="526d7d91-a8ee-4995-bca5-6b7f6009051d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="6c319d2f-4ee3-f2e7-59f5-50060bd40928" executionId="8eb00c77-0ed1-4977-94de-a39534869f7c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5d83a3c0-24b5-7ab9-2f0c-e8f3e8934366" executionId="7b1d3900-aef4-4b53-a0c4-f184842e95a9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="315279ef-8f43-ef09-48f5-2a5ef162b946" executionId="34510850-bba1-4c21-9db7-4415ed826e9a" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="80e699e9-9563-b8d4-1a60-465cf669a5a3" executionId="2b817774-3a9d-4716-bc62-f72f1e8bcba5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b5231f90-a6e3-bca7-08d3-993d6497fcad" executionId="86678003-d4ad-4f03-853e-ee8e3a563a3e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="4214af45-5078-2eaf-6005-78e7b7017631" executionId="eb80610f-e93f-4e75-bae3-35f08e582e64" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0ef67921-46d0-e1da-a4bd-ca5f96666c44" executionId="ed18ec2e-d8d3-4f07-97f5-a322bb6feb9f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b9e76fe0-50b3-1c9f-aea2-9b7bdb9da409" executionId="f022a353-1de0-4f1c-8e08-3331982612c4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="d9e1b26a-4264-8ec8-8bf8-a69b542c8652" executionId="b0d7a751-e98a-456d-8078-d3f01751d495" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="418a3562-fd33-0ac3-b0df-a7554e9c04cf" executionId="c3522fb1-66cb-4cbe-b698-0d76fcb574ea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="17d8a200-26e0-c2f0-13ff-b0ee0be5efa0" executionId="5eab2315-daf6-4224-86ef-d21b2c545d2b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c58361ee-6cd9-06f6-2aef-c6dff7fa48bb" executionId="125e406d-81d0-46e8-9755-1cb1b6bc7e25" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="613ccb19-fde5-996f-d590-11ff289aac4f" executionId="5a9cac06-dc68-4323-b12e-81861604c6be" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="37c36789-4f82-51dc-a800-0c8f24ca2ddb" executionId="a5c75624-63ac-4f51-810e-8449eed2b708" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bdbd6c93-a683-6418-1254-cd8f7d9a58a1" executionId="d3415232-1cb2-4ccb-a09d-40bbe9a70173" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b3b9bbbb-90f2-657d-4379-5cc10d1e49e6" executionId="11d981c9-a582-4d99-9f92-9782846bd642" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e913c38b-e670-4931-ccbc-def437574ff7" executionId="2e312ddd-52ed-4a19-b2d2-bfde85b9418c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="c4e1c9ec-1e90-97d5-804c-3885d45f4e00" executionId="5784dfdc-158c-4d27-aba2-9632ba391099" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="20" executed="20" passed="20" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v3.1.4+50e68bbb8b (64-bit .NET 10.0.9)
+[xUnit.net 00:00:00.37]   Discovering: OrderManagement.Tests
+[xUnit.net 00:00:00.58]   Discovered:  OrderManagement.Tests
+[xUnit.net 00:00:00.69]   Starting:    OrderManagement.Tests
+[xUnit.net 00:00:08.53]   Finished:    OrderManagement.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
