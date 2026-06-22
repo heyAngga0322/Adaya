@@ -1,4 +1,4 @@
- # Order Management API
+ # Order Management API (Indonesian)
 
  Prototype REST API untuk manajemen order, dibangun dengan **ASP.NET Core (.NET 10)** sebagai fondasi untuk rewrite sistem distribusi.
 

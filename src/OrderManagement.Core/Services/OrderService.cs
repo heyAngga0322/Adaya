@@ -306,10 +306,10 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
         CreateOrderRequest request,
         CancellationToken cancellationToken)
     {
-        var productIds = request.Items.Select(x => x.ProductId).Distinct().ToList();
+        var productIds = request.Items.Select(product => product.ProductId).Distinct().ToList();
         var products = await dbContext.Products
-            .Where(x => productIds.Contains(x.Id))
-            .ToDictionaryAsync(x => x.Id, cancellationToken);
+            .Where(product => productIds.Contains(product.Id))
+            .ToDictionaryAsync(product => product.Id, cancellationToken);
 
         if (products.Count != productIds.Count)
         {
@@ -323,9 +323,9 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
     private async Task<bool> DeductStockAsync(Guid productId, int quantity, CancellationToken cancellationToken)
     {
         var affectedRows = await dbContext.Products
-            .Where(x => x.Id == productId && x.StockQuantity >= quantity)
+            .Where(product => product.Id == productId && product.StockQuantity >= quantity)
             .ExecuteUpdateAsync(
-                setters => setters.SetProperty(x => x.StockQuantity, x => x.StockQuantity - quantity),
+                setters => setters.SetProperty(product => product.StockQuantity, product => product.StockQuantity - quantity),
                 cancellationToken);
 
         return affectedRows == 1;
@@ -334,9 +334,9 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
     private async Task RestoreStockAsync(Guid productId, int quantity, CancellationToken cancellationToken)
     {
         var affectedRows = await dbContext.Products
-            .Where(x => x.Id == productId)
+            .Where(product => product.Id == productId)
             .ExecuteUpdateAsync(
-                setters => setters.SetProperty(x => x.StockQuantity, x => x.StockQuantity + quantity),
+                setters => setters.SetProperty(product => product.StockQuantity, product => product.StockQuantity + quantity),
                 cancellationToken);
 
         if (affectedRows != 1)
@@ -351,7 +351,7 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
         CancellationToken cancellationToken)
     {
         var record = await dbContext.IdempotencyRecords
-            .FirstOrDefaultAsync(x => x.Key == idempotencyKey, cancellationToken);
+            .FirstOrDefaultAsync(idempotencyRecord => idempotencyRecord.Key == idempotencyKey, cancellationToken);
 
         if (record is null)
         {

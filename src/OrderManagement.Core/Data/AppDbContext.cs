@@ -14,51 +14,51 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
     {
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(x => x.Id);
-            entity.Property(x => x.Name).HasMaxLength(200).IsRequired();
-            entity.Property(x => x.Price).HasPrecision(18, 2);
+            entity.HasKey(product => product.Id);
+            entity.Property(product => product.Name).HasMaxLength(200).IsRequired();
+            entity.Property(product => product.Price).HasPrecision(18, 2);
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(x => x.Id);
-            entity.Property(x => x.ShippingAddress).HasMaxLength(500).IsRequired();
-            entity.Property(x => x.Status).HasConversion<string>().HasMaxLength(20);
-            entity.Property(x => x.CreatedAt)
+            entity.HasKey(order => order.Id);
+            entity.Property(order => order.ShippingAddress).HasMaxLength(500).IsRequired();
+            entity.Property(order => order.Status).HasConversion<string>().HasMaxLength(20);
+            entity.Property(order => order.CreatedAt)
                 .HasColumnType("timestamp with time zone")
                 .HasDefaultValueSql("NOW()");
-            entity.Property(x => x.RowVersion)
+            entity.Property(order => order.RowVersion)
                 .IsRowVersion()
                 .HasColumnName("xmin")
                 .HasColumnType("xid");
-            entity.HasIndex(x => x.CustomerId);
-            entity.HasIndex(x => x.Status);
-            entity.HasIndex(x => x.CreatedAt);
+            entity.HasIndex(order => order.CustomerId);
+            entity.HasIndex(order => order.Status);
+            entity.HasIndex(order => order.CreatedAt);
         });
 
         modelBuilder.Entity<OrderItem>(entity =>
         {
-            entity.HasKey(x => x.Id);
-            entity.Property(x => x.UnitPrice).HasPrecision(18, 2);
-            entity.HasOne(x => x.Order)
-                .WithMany(x => x.Items)
-                .HasForeignKey(x => x.OrderId)
+            entity.HasKey(orderItem => orderItem.Id);
+            entity.Property(orderItem => orderItem.UnitPrice).HasPrecision(18, 2);
+            entity.HasOne(orderItem => orderItem.Order)
+                .WithMany(order => order.Items)
+                .HasForeignKey(orderItem => orderItem.OrderId)
                 .OnDelete(DeleteBehavior.Cascade);
-            entity.HasOne(x => x.Product)
+            entity.HasOne(orderItem => orderItem.Product)
                 .WithMany()
-                .HasForeignKey(x => x.ProductId)
+                .HasForeignKey(orderItem => orderItem.ProductId)
                 .OnDelete(DeleteBehavior.Restrict);
         });
 
         modelBuilder.Entity<IdempotencyRecord>(entity =>
         {
-            entity.HasKey(x => x.Id);
-            entity.Property(x => x.Key).HasMaxLength(128).IsRequired();
-            entity.Property(x => x.RequestHash).HasMaxLength(128).IsRequired();
-            entity.Property(x => x.CreatedAt)
+            entity.HasKey(record => record.Id);
+            entity.Property(record => record.Key).HasMaxLength(128).IsRequired();
+            entity.Property(record => record.RequestHash).HasMaxLength(128).IsRequired();
+            entity.Property(record => record.CreatedAt)
                 .HasColumnType("timestamp with time zone")
                 .HasDefaultValueSql("NOW()");
-            entity.HasIndex(x => x.Key).IsUnique();
+            entity.HasIndex(record => record.Key).IsUnique();
         });
     }
 }

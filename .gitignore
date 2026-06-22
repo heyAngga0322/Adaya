@@ -8,6 +8,7 @@ out/
 .idea/
 *.user
 *.suo
+.vscode/
 
 ## OS
 .DS_Store
@@ -26,3 +27,6 @@ coverage/
 
 ## Docker
 postgres_data/
+
+*.txt
+*.pdf
