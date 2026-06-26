@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/angga/Projects/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj": {}
+    "/home/angga/Projects/Test/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj": {}
   },
   "projects": {
-    "/home/angga/Projects/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj": {
+    "/home/angga/Projects/Test/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/angga/Projects/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj",
+        "projectUniqueName": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj",
         "projectName": "OrderManagement.Api",
-        "projectPath": "/home/angga/Projects/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj",
+        "projectPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Api/OrderManagement.Api.csproj",
         "packagesPath": "/home/angga/.nuget/packages/",
-        "outputPath": "/home/angga/Projects/Adaya/src/OrderManagement.Api/obj/",
+        "outputPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Api/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/angga/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net10.0": {
             "targetAlias": "net10.0",
             "projectReferences": {
-              "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj": {
-                "projectPath": "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj"
+              "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj": {
+                "projectPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj"
               }
             }
           }
@@ -378,14 +378,14 @@
         }
       }
     },
-    "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj": {
+    "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
+        "projectUniqueName": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
         "projectName": "OrderManagement.Core",
-        "projectPath": "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
+        "projectPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
         "packagesPath": "/home/angga/.nuget/packages/",
-        "outputPath": "/home/angga/Projects/Adaya/src/OrderManagement.Core/obj/",
+        "outputPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/angga/.nuget/NuGet/NuGet.Config"

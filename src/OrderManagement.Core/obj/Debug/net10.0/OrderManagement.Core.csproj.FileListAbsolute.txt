@@ -10,3 +10,16 @@
 /home/angga/Projects/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/refint/OrderManagement.Core.dll
 /home/angga/Projects/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.pdb
 /home/angga/Projects/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/ref/OrderManagement.Core.dll
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/bin/Debug/net10.0/OrderManagement.Core.deps.json
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/bin/Debug/net10.0/OrderManagement.Core.dll
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/bin/Debug/net10.0/OrderManagement.Core.pdb
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.csproj.AssemblyReference.cache
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.GeneratedMSBuildEditorConfig.editorconfig
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.AssemblyInfoInputs.cache
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.AssemblyInfo.cs
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.csproj.CoreCompileInputs.cache
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.sourcelink.json
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.dll
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/refint/OrderManagement.Core.dll
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/OrderManagement.Core.pdb
+/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/Debug/net10.0/ref/OrderManagement.Core.dll

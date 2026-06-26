@@ -703,11 +703,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
+      "projectUniqueName": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
       "projectName": "OrderManagement.Core",
-      "projectPath": "/home/angga/Projects/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
+      "projectPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/OrderManagement.Core.csproj",
       "packagesPath": "/home/angga/.nuget/packages/",
-      "outputPath": "/home/angga/Projects/Adaya/src/OrderManagement.Core/obj/",
+      "outputPath": "/home/angga/Projects/Test/Adaya/src/OrderManagement.Core/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/angga/.nuget/NuGet/NuGet.Config"

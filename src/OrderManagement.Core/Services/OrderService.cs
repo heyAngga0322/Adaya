@@ -34,6 +34,10 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
         CancellationToken cancellationToken)
     {
         ValidateCreateRequest(request);
+        logger.LogInformation(
+            "Processing create order request for customer {CustomerId} with idempotency key {IdempotencyKey}",
+            request.CustomerId,
+            idempotencyKey);
 
         var requestHash = RequestHasher.HashCreateOrderRequest(request);
         await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
@@ -98,6 +102,11 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
         }
         catch (DbUpdateException ex) when (IsUniqueViolation(ex))
         {
+            logger.LogWarning(
+                ex,
+                "Unique constraint violation while creating order with idempotency key {IdempotencyKey}",
+                idempotencyKey);
+
             await transaction.RollbackAsync(cancellationToken);
             dbContext.ChangeTracker.Clear();
 
@@ -109,6 +118,15 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
 
             return await GetOrderInternalAsync(completedOrderId.Value, cancellationToken)
                 ?? throw new NotFoundException($"Order '{completedOrderId}' was not found.");
+        }
+        catch (Exception ex)
+        {
+            await transaction.RollbackAsync(cancellationToken);
+            logger.LogError(
+                ex,
+                "Failed to create order for idempotency key {IdempotencyKey}",
+                idempotencyKey);
+            throw;
         }
     }
 
@@ -192,9 +210,9 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
         await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
 
         var order = await dbContext.Orders
-            .Include(x => x.Items)
-            .ThenInclude(x => x.Product)
-            .FirstOrDefaultAsync(x => x.Id == orderId, cancellationToken);
+            .Include(ord => ord.Items)
+            .ThenInclude(ord => ord.Product)
+            .FirstOrDefaultAsync(ord => ord.Id == orderId, cancellationToken);
 
         if (order is null)
         {
@@ -213,6 +231,12 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
             throw new UnprocessableException($"Invalid status transition from '{order.Status}' to '{newStatus}'.");
         }
 
+        logger.LogInformation(
+            "Updating order {OrderId} status from {CurrentStatus} to {NewStatus}",
+            orderId,
+            order.Status,
+            newStatus);
+
         order.Status = newStatus;
         order.UpdatedAt = DateTime.UtcNow;
 
@@ -223,9 +247,25 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
             logger.LogInformation("Updated order {OrderId} status to {Status}", orderId, newStatus);
             return MapOrder(order);
         }
-        catch (DbUpdateConcurrencyException)
+        catch (DbUpdateConcurrencyException ex)
         {
+            logger.LogWarning(
+                ex,
+                "Concurrency conflict while updating order {OrderId} status to {Status} with row version {RowVersion}",
+                orderId,
+                newStatus,
+                rowVersion);
+
             throw new ConflictException("Order was modified by another request. Refresh and retry.");
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(
+                ex,
+                "Failed to update order {OrderId} status to {Status}",
+                orderId,
+                newStatus);
+            throw;
         }
     }
 
@@ -250,6 +290,12 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
             throw new ConflictException($"Order in status '{order.Status}' cannot be cancelled.");
         }
 
+        logger.LogInformation(
+            "Cancelling order {OrderId} currently in status {CurrentStatus} for customer {CustomerId}",
+            orderId,
+            order.Status,
+            order.CustomerId);
+
         foreach (var item in order.Items)
         {
             await RestoreStockAsync(item.ProductId, item.Quantity, cancellationToken);
@@ -265,9 +311,23 @@ public sealed class OrderService(AppDbContext dbContext, ILogger<OrderService> l
             logger.LogInformation("Cancelled order {OrderId}", orderId);
             return MapOrder(order);
         }
-        catch (DbUpdateConcurrencyException)
+        catch (DbUpdateConcurrencyException ex)
         {
+            logger.LogWarning(
+                ex,
+                "Concurrency conflict while cancelling order {OrderId} with row version {RowVersion}",
+                orderId,
+                rowVersion);
+
             throw new ConflictException("Order was modified by another request. Refresh and retry.");
+        }
+        catch (Exception ex)
+        {
+            logger.LogError(
+                ex,
+                "Failed to cancel order {OrderId}",
+                orderId);
+            throw;
         }
     }
 
